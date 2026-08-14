@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Dashboard',
+  title: 'Profile',
 };
 
 export default async function Page() {
     
     return (
         <main>
-            <h1>Dashboard</h1>
+            <h1>Profile</h1>
         </main>
     );
 }
