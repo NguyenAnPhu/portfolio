@@ -10,8 +10,7 @@ export const IMGS_DIR = "/assets/imgs";
 export const IMAGES = {
   // Ví dụ các đường dẫn ảnh mẫu:
   avatar: `${IMGS_DIR}/avatar.png`,
-  // avatar: `${IMGS_DIR}/avatar.png`,
-  // logo: `${IMGS_DIR}/logo.png`,
+  logo: `${IMGS_DIR}/logo.png`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
