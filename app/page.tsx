@@ -1,27 +1,26 @@
-import CTA from "../components/sections/cta/default";
-import FAQ from "../components/sections/faq/default";
-import Footer from "../components/sections/footer/default";
-import Hero from "../components/sections/hero/default";
-import Items from "../components/sections/items/default";
-import Logos from "../components/sections/logos/default";
-import Navbar from "../components/sections/navbar/default";
-import Pricing from "../components/sections/pricing/default";
-import Stats from "../components/sections/stats/default";
-import { LayoutLines } from "../components/ui/layout-lines";
+import { CertificatesSection } from "@/components/certificates/CertificatesSection";
+import { ExperienceSection } from "@/components/experience/ExperienceSection";
+import { EducationSection } from "@/components/introduction/EducationSection";
+import { IntroductionSection } from "@/components/introduction/IntroductionSection";
+import { FloatingContactBar } from "@/components/layout/FloatingContactBar";
+import { ProjectsSection } from "@/components/projects/ProjectsSection";
+import { SkillsSection } from "@/components/skills/SkillsSection";
 
 export default function Home() {
   return (
-    <main className="bg-background text-foreground min-h-screen w-full">
-      <LayoutLines />
-      <Navbar />
-      <Hero />
-      <Logos />
-      <Items />
-      <Stats />
-      <Pricing />
-      <FAQ />
-      <CTA />
-      <Footer />
-    </main>
+    <>
+      {/* Subtle dotted background */}
+      <div className="pointer-events-none fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(var(--border)_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
+      
+      <FloatingContactBar />
+      <main className="flex min-h-screen flex-col">
+        <IntroductionSection />
+        <EducationSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <CertificatesSection />
+      </main>
+    </>
   );
 }

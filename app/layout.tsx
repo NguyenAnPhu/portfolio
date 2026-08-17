@@ -2,7 +2,6 @@ import "@/app/globals.css";
 import "@/assets/sass/index.scss";
 
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 
 import { inter } from "@/lib/fonts";
 
@@ -16,24 +15,25 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
-    "Landing page template",
-    "Components",
-    "Shadcn",
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Radix UI",
+    "FullStack Developer",
+    "Frontend Developer",
+    "ReactJS",
+    "TypeScript",
+    "PHP",
+    "Zalo Mini App",
+    "React Native",
+    "NextJS",
   ],
   authors: [
     {
-      name: "Mikolaj Dobrucki",
-      url: "https://mikolajdobrucki.com",
+      name: "Nguyễn An Phú",
+      url: "https://nguyenanphu.dev",
     },
   ],
-  creator: "mikolajdobrucki",
+  creator: "Nguyễn An Phú",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "vi_VN",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@mikolajdobrucki",
+    creator: "@nguyenanphu",
   },
   icons: {
     icon: [
@@ -97,19 +97,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="light"
-      style={{ colorScheme: "light" }}
+      className="dark"
+      style={{ colorScheme: "dark" }}
       suppressHydrationWarning
     >
       <body className={`${inter.variable} bg-background font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

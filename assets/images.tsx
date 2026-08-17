@@ -11,6 +11,9 @@ export const IMAGES = {
   // Ví dụ các đường dẫn ảnh mẫu:
   avatar: `${IMGS_DIR}/avatar.png`,
   logo: `${IMGS_DIR}/logo.png`,
+  imgNotFound: `${IMGS_DIR}/imgNotFound.png`,
+  zauiLogo: `${IMGS_DIR}/zaui_logo.png`,
+  deepseek: `${IMGS_DIR}/deepseek.png`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;
