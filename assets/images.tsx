@@ -10,10 +10,19 @@ export const IMGS_DIR = "/assets/imgs";
 export const IMAGES = {
   // Ví dụ các đường dẫn ảnh mẫu:
   avatar: `${IMGS_DIR}/avatar.png`,
-  logo: `${IMGS_DIR}/logo.png`,
   imgNotFound: `${IMGS_DIR}/imgNotFound.png`,
   zauiLogo: `${IMGS_DIR}/zaui_logo.png`,
   deepseek: `${IMGS_DIR}/deepseek.png`,
+  toeic: `${IMGS_DIR}/certificate/toeic.png`,
+  pm_cert: `${IMGS_DIR}/certificate/PM_cert.png`,
+  bwa2026: `${IMGS_DIR}/certificate/bwa2026.png`,
+  greenvoices: `${IMGS_DIR}/project/greenvoices.png`,
+  greenvoices_zmp: `${IMGS_DIR}/project/greenvoices_zmp.png`,
+  orion: `${IMGS_DIR}/project/orion.png`,
+  rtechno: `${IMGS_DIR}/project/rtechno.png`,
+  ecom: `${IMGS_DIR}/project/ecom.png`,
+  battrach: `${IMGS_DIR}/project/battrach.png`,
+  ert: `${IMGS_DIR}/project/ert.png`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

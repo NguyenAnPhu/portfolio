@@ -52,7 +52,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
               {experience.company}
             </p>
           </div>
-          <span className="shrink-0 rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-600">
+          <span className="shrink-0 rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-600 text-center">
             {experience.period}
           </span>
         </div>

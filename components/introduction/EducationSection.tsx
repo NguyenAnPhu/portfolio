@@ -17,7 +17,7 @@ export function EducationSection() {
                 <h3 className="text-xl font-bold text-foreground">
                   Industrial University of Ho Chi Minh City
                 </h3>
-                <span className="mt-1 text-sm font-medium text-brand-600 sm:mt-0 bg-brand-50 px-3 py-1 rounded-full whitespace-nowrap">
+                <span className="mt-1 text-sm font-medium text-brand-600 sm:mt-0 bg-brand-50 px-3 py-1 rounded-full whitespace-nowrap text-center">
                   2019 – 2023
                 </span>
               </div>

@@ -10,9 +10,9 @@ export function IntroductionSection() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col justify-center animate-appear">
-            <h2 className="text-brand-600 mb-2 text-sm font-semibold tracking-wider uppercase">
+            <p className="text-brand-600 mb-2 text-sm font-semibold tracking-wider uppercase">
               About Me
-            </h2>
+            </p>
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-foreground">
               Nguyễn An Phú
             </h1>

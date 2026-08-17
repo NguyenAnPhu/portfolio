@@ -16,16 +16,16 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
   return (
     <>
       <div 
-        className="group overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-pointer active:scale-95"
+        className="group overflow-hidden rounded-2xl border border-grey-700 bg-card shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-pointer active:scale-95"
         onClick={() => setOpen(true)}
       >
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted/30 p-4">
+        <div className="relative aspect-4/3 w-full overflow-hidden bg-muted/30 p-4">
           <div className="relative h-full w-full overflow-hidden rounded-xl border border-border/50 bg-background shadow-inner transition-colors duration-200 group-hover:border-border/70">
             <Image
               src={certificate.image}
               alt={certificate.title}
               fill
-              className="object-contain transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
