@@ -23,6 +23,10 @@ export const IMAGES = {
   ecom: `${IMGS_DIR}/project/ecom.png`,
   battrach: `${IMGS_DIR}/project/battrach.png`,
   ert: `${IMGS_DIR}/project/ert.png`,
+  hrnavi: `${IMGS_DIR}/project/hrnavi.png`,
+  sensors: `${IMGS_DIR}/project/sensors.png`,
+  thanglongjsc: `${IMGS_DIR}/project/thanglongjsc.png`,
+  viarocoffee: `${IMGS_DIR}/project/viarocoffee.png`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

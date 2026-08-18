@@ -1,3 +1,12 @@
+"use client";
+
+import { Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import 'swiper/css/autoplay';
+
 import { Project, ProjectCategory as CategoryType } from "@/types";
 
 import { ProjectCard } from "./ProjectCard";
@@ -19,11 +28,36 @@ export function ProjectCategory({ title, category, projects }: ProjectCategoryPr
         <span className="mr-4 inline-block h-8 w-2 rounded-full bg-brand-600"></span>
         {title}
       </h3>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        }}
+        className="project-swiper pb-12!"
+      >
         {categoryProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <SwiperSlide key={project.id} className="h-auto!">
+            <ProjectCard project={project} />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 }
