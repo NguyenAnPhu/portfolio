@@ -1,8 +1,7 @@
 import IMAGES from "@/assets/images";
 
-import { LazyImage } from "@/components/common/LazyImage";
-
 import { Container } from "../layout/Container";
+import Image from "next/image";
 
 export function IntroductionSection() {
   return (
@@ -33,11 +32,12 @@ export function IntroductionSection() {
           </div>
           <div className="relative flex justify-center lg:justify-end animate-appear-zoom">
             <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96 overflow-hidden rounded-full border-4 border-background shadow-2xl glass-2">
-              <LazyImage
+              <Image
                 src={IMAGES.avatar}
                 alt="Nguyễn An Phú Avatar"
-                fill
                 className="object-cover"
+                fill
+                priority
                 sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
               />
             </div>
