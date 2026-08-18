@@ -27,6 +27,7 @@ export const IMAGES = {
   sensors: `${IMGS_DIR}/project/sensors.png`,
   thanglongjsc: `${IMGS_DIR}/project/thanglongjsc.png`,
   viarocoffee: `${IMGS_DIR}/project/viarocoffee.png`,
+  loading: `${IMGS_DIR}/loading.gif`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

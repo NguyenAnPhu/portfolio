@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Certificate } from "@/types";
 import { Dialog, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+
+import { LazyImage } from "@/components/common/LazyImage";
 
 interface CertificateCardProps {
   certificate: Certificate;
@@ -21,7 +22,7 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
       >
         <div className="relative aspect-4/3 w-full overflow-hidden bg-muted/30 p-4">
           <div className="relative h-full w-full overflow-hidden rounded-xl border border-border/50 bg-background shadow-inner transition-colors duration-200 group-hover:border-border/70">
-            <Image
+            <LazyImage
               src={certificate.image}
               alt={certificate.title}
               fill
@@ -68,13 +69,12 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
             <CloseIcon />
           </IconButton>
           <div className="relative h-[80vh] w-[90vw] max-w-5xl rounded-lg bg-background p-2 sm:p-4">
-            <Image
+            <LazyImage
               src={certificate.image}
               alt={certificate.title}
               fill
               className="object-contain"
               sizes="100vw"
-              priority
             />
           </div>
         </div>

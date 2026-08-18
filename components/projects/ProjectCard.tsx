@@ -2,11 +2,11 @@
 
 import InfoIcon from "@mui/icons-material/Info";
 import LaunchIcon from "@mui/icons-material/Launch";
-import Image from "next/image";
 import { useState } from "react";
 
 import { Project } from "@/types";
 
+import { LazyImage } from "@/components/common/LazyImage";
 import { ProjectDetailDialog } from "./ProjectDetailDialog";
 
 interface ProjectCardProps {
@@ -20,7 +20,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <>
       <div className="group flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-pointer">
         <div className="relative h-48 w-full overflow-hidden bg-muted transition-colors duration-200">
-          <Image
+          <LazyImage
             src={project.image}
             alt={project.title}
             fill

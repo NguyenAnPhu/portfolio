@@ -1,6 +1,6 @@
-import Image from "next/image";
-
 import IMAGES from "@/assets/images";
+
+import { LazyImage } from "@/components/common/LazyImage";
 
 import { Container } from "../layout/Container";
 
@@ -17,7 +17,7 @@ export function IntroductionSection() {
               Nguyễn An Phú
             </h1>
             <p className="mb-8 text-xl font-medium text-muted-foreground">
-              FullStack Developer
+              Frontend Developer
             </p>
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
@@ -33,12 +33,11 @@ export function IntroductionSection() {
           </div>
           <div className="relative flex justify-center lg:justify-end animate-appear-zoom">
             <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96 overflow-hidden rounded-full border-4 border-background shadow-2xl glass-2">
-              <Image
+              <LazyImage
                 src={IMAGES.avatar}
                 alt="Nguyễn An Phú Avatar"
                 fill
                 className="object-cover"
-                priority
                 sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
               />
             </div>
