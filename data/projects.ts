@@ -99,6 +99,18 @@ export const projects: Project[] = [
     previewUrl: "https://viarocoffee.com/",
   },
   {
+    id: "Pokemon",
+    category: "website",
+    title: "Pokemon",
+    image: IMAGES.pokemon,
+    shortDescription: "",
+    role: "Frontend Developer",
+    responsibilities: [
+      "This project is designed to learn the fundamentals of Vue.js 3, covering essential concepts such as the Reactivity system (ref/reactive), data binding (v-model, v-bind), event handling (v-on), component communication (Props/Emits), and basic state management.",
+    ],
+    previewUrl: "https://pokemonpuh.netlify.app/",
+  },
+  {
     id: "mua-sam-online-ecom",
     category: "zalo-mini-app",
     title: "Mua sắm online ECOM",
