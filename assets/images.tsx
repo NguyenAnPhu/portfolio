@@ -29,6 +29,8 @@ export const IMAGES = {
   viarocoffee: `${IMGS_DIR}/project/viarocoffee.png`,
   loading: `${IMGS_DIR}/loading.gif`,
   pokemon: `${IMGS_DIR}/project/pokemon.png`,
+  miniPanel: `${IMGS_DIR}/project/miniPanel.png`,
+
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

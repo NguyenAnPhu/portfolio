@@ -7,7 +7,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Nha Khoa Orion",
     image: IMAGES.orion,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Greenvoices Media",
     image: IMAGES.greenvoices,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Evaluated UI/UX designs, built responsive interfaces and integrated Backend functionalities.",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     category: "website",
     title: "R Techno VietNam",
     image: IMAGES.rtechno,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Consulted on UI/UX flows, developed frontend components and integrated Backend APIs.",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Viện Đào tạo & Nghiên cứu Kinh tế - Xã hội (ERT)",
     image: IMAGES.ert,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "website",
     title: "SENSORS VIỆT NAM",
     image: IMAGES.sensors,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Thăng Long JSC",
     image: IMAGES.thanglongjsc,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Viaro Coffee",
     image: IMAGES.viarocoffee,
-    shortDescription: "",
+    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -103,12 +103,28 @@ export const projects: Project[] = [
     category: "website",
     title: "Pokemon",
     image: IMAGES.pokemon,
-    shortDescription: "",
+    shortDescription: "VueJS, HTML, CSS, SCSS, JS, VITE, TAILWINDCSS",
     role: "Frontend Developer",
     responsibilities: [
       "This project is designed to learn the fundamentals of Vue.js 3, covering essential concepts such as the Reactivity system (ref/reactive), data binding (v-model, v-bind), event handling (v-on), component communication (Props/Emits), and basic state management.",
     ],
     previewUrl: "https://pokemonpuh.netlify.app/",
+  },
+  {
+    id: "miniPanel",
+    category: "zalo-mini-app",
+    title: "miniPanel",
+    image: IMAGES.miniPanel,
+    shortDescription: "TypeScript, ReactJS, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Developed the Mini App dashboard interface and functional workflows using ReactJS and TypeScript.",
+      "Configured and integrated ZMP SDK and RESTful APIs to handle application data and business logic.",
+      "Implemented permission checks and management features for products, articles, administrators, contacts, and menus, including CRUD operations and filtering.",
+      "Developed dashboard statistics and order status management features.",
+      "Developed RESTful APIs using PHP for Product, Article, Contact and Admin CRUD operations."
+    ],
+    previewUrl: "https://zalo.me/s/4219493405174168636",
   },
   {
     id: "mua-sam-online-ecom",
