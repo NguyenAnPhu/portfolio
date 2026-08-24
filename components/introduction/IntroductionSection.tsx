@@ -16,7 +16,7 @@ export function IntroductionSection() {
               Nguyễn An Phú
             </h1>
             <p className="mb-8 text-xl font-medium text-muted-foreground">
-              Frontend Developer
+              Developer
             </p>
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
