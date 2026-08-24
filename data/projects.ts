@@ -7,7 +7,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Nha Khoa Orion",
     image: IMAGES.orion,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Greenvoices Media",
     image: IMAGES.greenvoices,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Evaluated UI/UX designs, built responsive interfaces and integrated Backend functionalities.",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     category: "website",
     title: "R Techno VietNam",
     image: IMAGES.rtechno,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Consulted on UI/UX flows, developed frontend components and integrated Backend APIs.",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Viện Đào tạo & Nghiên cứu Kinh tế - Xã hội (ERT)",
     image: IMAGES.ert,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "website",
     title: "SENSORS VIỆT NAM",
     image: IMAGES.sensors,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Thăng Long JSC",
     image: IMAGES.thanglongjsc,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Viaro Coffee",
     image: IMAGES.viarocoffee,
-    shortDescription: "PHP, TWIG, HTML, CSS, SCSS, JS, JQUERY, BOOTSTRAP",
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
     role: "Frontend Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     category: "website",
     title: "Pokemon",
     image: IMAGES.pokemon,
-    shortDescription: "VueJS, HTML, CSS, SCSS, JS, VITE, TAILWINDCSS",
+    shortDescription: "VueJS, HTML, SCSS, JS, VITE, TAILWINDCSS",
     role: "Frontend Developer",
     responsibilities: [
       "This project is designed to learn the fundamentals of Vue.js 3, covering essential concepts such as the Reactivity system (ref/reactive), data binding (v-model, v-bind), event handling (v-on), component communication (Props/Emits), and basic state management.",
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "miniPanel",
     image: IMAGES.miniPanel,
-    shortDescription: "TypeScript, ReactJS, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Fullstack Developer",
     responsibilities: [
       "Developed the Mini App dashboard interface and functional workflows using ReactJS and TypeScript.",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "Mua sắm online ECOM",
     image: IMAGES.ecom,
-    shortDescription: "",
+    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Fullstack Developer",
     responsibilities: [
       "Built the user interface and deeply integrated the ZMP SDK.",
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "Greenvoices Media",
     image: IMAGES.greenvoices_zmp,
-    shortDescription: "",
+    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Frontend Developer",
     responsibilities: [
       "Took primary responsibility for building the Mini App interface and configuring the ZMP SDK.",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "HRnavi",
     image: IMAGES.hrnavi,
-    shortDescription: "",
+    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Frontend Developer",
     responsibilities: [
       "Took primary responsibility for building the Mini App interface and configuring the ZMP SDK.",
@@ -175,7 +175,7 @@ export const projects: Project[] = [
     category: "mobile-app",
     title: "Bát Trạch Lạc Việt",
     image: IMAGES.battrach,
-    shortDescription: "",
+    shortDescription: "TypeScript, React Native",
     role: "Frontend Developer",
     responsibilities: [
       "Utilized AI assistance to refactor the existing codebase and smoothly migrate the project into a mobile app for Android.",
