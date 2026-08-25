@@ -6,7 +6,7 @@ import { ProjectCategory } from "./ProjectCategory";
 
 export function ProjectsSection() {
   return (
-    <Section id="projects" title="Projects" className="bg-muted/30">
+    <Section id="projects" title="Projects" className="bg-transparent relative z-10">
       <Container>
         <div className="mx-auto max-w-6xl">
           <ProjectCategory

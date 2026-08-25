@@ -17,7 +17,7 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
   return (
     <>
       <div 
-        className="group overflow-hidden rounded-2xl border border-grey-700 bg-card shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-pointer active:scale-95"
+        className="group overflow-hidden rounded-2xl glass-card cursor-pointer active:scale-95"
         onClick={() => setOpen(true)}
       >
         <div className="relative aspect-4/3 w-full overflow-hidden bg-muted/30 p-4">

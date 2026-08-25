@@ -1,5 +1,8 @@
+"use client";
+
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import React from "react";
+import { motion } from "framer-motion";
 
 import { Experience, ResponsibilityGroup } from "@/types";
 
@@ -42,7 +45,13 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
         <div className="h-full w-[2px] bg-border group-last:bg-transparent -mt-2"></div>
       </div>
 
-      <div className="rounded-2xl border bg-card p-6 shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-default">
+      <motion.div 
+        className="rounded-2xl glass-card p-6 cursor-default"
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <div className="mb-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
           <div>
             <h3 className="text-xl font-bold text-foreground leading-tight">
@@ -64,7 +73,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
             </React.Fragment>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

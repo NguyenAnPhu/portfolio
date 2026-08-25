@@ -18,8 +18,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <>
-      <div className="group flex h-full flex-col overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-pointer">
-        <div className="relative h-48 w-full overflow-hidden bg-muted transition-colors duration-200">
+      <div className="group flex h-full flex-col overflow-hidden rounded-2xl glass-card cursor-pointer">
+        <div className="relative h-48 w-full overflow-hidden bg-background/50 transition-colors duration-200">
           <LazyImage
             src={project.image}
             alt={project.title}

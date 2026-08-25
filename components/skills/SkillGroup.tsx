@@ -1,4 +1,7 @@
+"use client";
+
 import { SkillGroup as SkillGroupType } from "@/types";
+import { motion } from "framer-motion";
 
 import { SkillItem } from "./SkillItem";
 
@@ -8,7 +11,13 @@ interface SkillGroupProps {
 
 export function SkillGroup({ group }: SkillGroupProps) {
   return (
-    <div className="rounded-2xl border bg-muted/20 p-6 transition-all duration-200 hover:border-border/80">
+    <motion.div 
+      className="rounded-2xl glass-card p-6"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <h3 className="mb-6 text-center text-lg font-bold text-foreground">
         {group.title}
       </h3>
@@ -17,6 +26,6 @@ export function SkillGroup({ group }: SkillGroupProps) {
           <SkillItem key={skill.name} skill={skill} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

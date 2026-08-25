@@ -62,7 +62,7 @@ export function ExperienceSection() {
               }`}
               aria-hidden={isExpanded}
             >
-              <div className="absolute inset-0 bg-linear-to-t from-background via-background/75 to-transparent backdrop-blur-[2px]" />
+              <div className="absolute inset-0 bg-linear-to-t from-background via-background/75 to-transparent backdrop-blur-[2px] rounded-b-lg" />
               <button
                 type="button"
                 onClick={() => setIsExpanded(true)}

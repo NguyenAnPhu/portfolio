@@ -1,14 +1,23 @@
+"use client";
+
 import SchoolIcon from "@mui/icons-material/School";
+import { motion } from "framer-motion";
 
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 
 export function EducationSection() {
   return (
-    <Section id="education" title="Education" className="bg-muted/30">
+    <Section id="education" title="Education" className="bg-transparent relative z-10">
       <Container>
         <div className="mx-auto max-w-3xl">
-          <article className="relative flex flex-col gap-6 rounded-2xl border bg-card p-6 shadow-sm transition-all duration-200 hover:shadow-md hover:border-border/80 cursor-default sm:flex-row sm:p-8">
+          <motion.article 
+            className="relative flex flex-col gap-6 rounded-2xl glass-card p-6 cursor-default sm:flex-row sm:p-8"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
               <SchoolIcon />
             </div>
@@ -28,7 +37,7 @@ export function EducationSection() {
                 During my studies, I developed a foundational understanding of Website Development, Internet of Things (IoT), and Computer Networking. I gained practical experience through programming assignments and projects involving application development, device connectivity, and network system configuration.
               </p>
             </div>
-          </article>
+          </motion.article>
         </div>
       </Container>
     </Section>

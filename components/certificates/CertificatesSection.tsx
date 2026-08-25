@@ -6,7 +6,7 @@ import { CertificateCard } from "./CertificateCard";
 
 export function CertificatesSection() {
   return (
-    <Section id="certificates" title="Certificates" className="bg-muted/30">
+    <Section id="certificates" title="Certificates" className="bg-transparent relative z-10">
       <Container>
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
