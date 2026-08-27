@@ -1,0 +1,249 @@
+@import "tailwindcss";
+@import "../styles/utils.css";
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+    /* Colors */
+    --color-brand: var(--brand);
+    --color-brand-foreground: var(--brand-foreground);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    /* Brand */
+    --color-brand-50: var(--brand-50);
+    --color-brand-100: var(--brand-100);
+    --color-brand-200: var(--brand-200);
+    --color-brand-300: var(--brand-300);
+    --color-brand-400: var(--brand-400);
+    --color-brand-500: var(--brand-500);
+    --color-brand-600: var(--brand-600);
+    --color-brand-700: var(--brand-700);
+    --color-brand-800: var(--brand-800);
+    --color-brand-900: var(--brand-900);
+    --color-brand-950: var(--brand-950);
+
+    
+    /* Grey */
+    --color-grey-50: var(--grey-50);
+    --color-grey-100: var(--grey-100);
+    --color-grey-200: var(--grey-200);
+    --color-grey-300: var(--grey-300);
+    --color-grey-500: var(--grey-500);
+    --color-grey-700: var(--grey-700);
+    --color-grey-800: var(--grey-800);
+    --color-grey-900: var(--grey-900);
+    --color-grey-950: var(--grey-950);
+
+    /* Radius */
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --radius-2xl: calc(var(--radius) + 8px);
+
+    /* Spacing */
+    --spacing-container: 1280px;
+    --spacing-container-lg: 1536px;
+
+    /* Shadows */
+    --shadow-md: 0 4px 6px -1px var(--shadow), 0 2px 4px -2px var(--shadow);
+    --shadow-xl: 0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow);
+    --shadow-2xl: 0 25px 50px -12px var(--shadow);
+    --shadow-mockup: -12px 16px 48px var(--shadow-strong);
+
+    /* Separators */
+    --line-width: 1px;
+
+    /* Animations */
+    --animate-accordion-down: accordion-down 0.2s ease-out;
+    --animate-accordion-up: accordion-up 0.2s ease-out;
+    --animate-appear: appear 0.6s forwards ease-out;
+    --animate-appear-zoom: appear-zoom 0.6s forwards ease-out;
+    --animate-blob: blob 7s infinite;
+
+    /* Breakpoints */
+    --breakpoint-xs: 30rem;
+
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+
+        to {
+            height: 0;
+        }
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(1rem);
+            filter: blur(0.5rem);
+        }
+
+        50% {
+            filter: blur(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    }
+
+    @keyframes appear-zoom {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes blob {
+        0% {
+            transform: translate(0px, 0px) scale(1);
+        }
+        33% {
+            transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+            transform: translate(-20px, 20px) scale(0.9);
+        }
+        100% {
+            transform: translate(0px, 0px) scale(1);
+        }
+    }
+}
+
+:root {
+    /* Brand Colors (Deep Blue) */
+    --brand-50: #EFF6FF;
+    --brand-100: #DBEAFE;
+    --brand-200: #BFDBFE;
+    --brand-300: #93C5FD;
+    --brand-400: #60A5FA;
+    --brand-500: #3B82F6;
+    --brand-600: #2563EB;
+    --brand-700: #1D4ED8;
+    --brand-800: #1E40AF;
+    --brand-900: #1E3A8A;
+    --brand-950: #172554;
+
+    /* Customized shadcn/ui colors */
+    --background: oklch(97.65% 0.001 17.18);
+    --foreground: oklch(0.141 0.005 285.823);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.141 0.005 285.823);
+    --primary: oklch(66.5% 0.1804 47.04);
+    --primary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.967 0.001 286.375);
+    --muted-foreground: oklch(0.552 0.016 285.938);
+    --border: oklch(0.92 0.004 286.32);
+    --input: oklch(0.92 0.004 286.32);
+    --radius: 0.625rem;
+
+    /* Illustrations colors */
+    --light: var(--brand);
+    --light-foreground: var(--brand-foreground);
+
+    /* Shadows */
+    --shadow: #00000008;
+    --shadow-strong: #00000008;
+
+    --grey-50: #FAFAFA;
+    --grey-100: #F5F5F5;
+    --grey-200: #E5E5E5;
+    --grey-300: #D4D4D4;
+    --grey-500 : #737373;
+    --grey-700: #404040;
+    --grey-800: #262626;
+    --grey-900: #171717;
+    --grey-950: #0A0A0A;
+}
+
+.dark {
+    /* Accent colors */
+    --brand: oklch(83.6% 0.1177 66.87);
+    --brand-foreground: oklch(75.77% 0.159 55.91);
+
+    /* Brand Colors (Deep Blue - Dark Mode Adjusted) */
+    --brand-50: #172554;
+    --brand-100: #1E3A8A;
+    --brand-200: #1E40AF;
+    --brand-300: #1D4ED8;
+    --brand-400: #2563EB;
+    --brand-500: #3B82F6;
+    --brand-600: #60A5FA;
+    --brand-700: #93C5FD;
+    --brand-800: #BFDBFE;
+    --brand-900: #DBEAFE;
+    --brand-950: #EFF6FF;
+
+    /* Customized shadcn/ui colors */
+    --background: oklch(0.141 0.005 285.823);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.141 0.005 285.823);
+    --card-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.21 0.006 285.885);
+    --muted: oklch(0.22 0.006 286.033);
+    --muted-foreground: oklch(0.705 0.015 286.067);
+    --border: oklch(0.20 0.006 286.033);
+    --input: oklch(0.20 0.006 286.033);
+
+    /* Illustrations colors */
+    --light: var(--foreground);
+    --light-foreground: var(--foreground);
+
+    /* Shadows */
+    --shadow: #00000020;
+    --shadow-strong: #00000088;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer components {
+    .glass-card {
+        @apply bg-background/60 backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-xl transition-all duration-300;
+    }
+    .glass-card:hover {
+        @apply shadow-brand-500/10 border-brand-500/20 -translate-y-1;
+    }
+    .glass-panel {
+        @apply bg-background/40 backdrop-blur-2xl border border-white/10;
+    }
+}
