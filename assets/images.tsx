@@ -30,7 +30,7 @@ export const IMAGES = {
   loading: `${IMGS_DIR}/loading.gif`,
   pokemon: `${IMGS_DIR}/project/pokemon.png`,
   miniPanel: `${IMGS_DIR}/project/miniPanel.png`,
-
+  dopfood: `${IMGS_DIR}/project/dopfood.png`,
 } as const;
 
 export type ImageKey = keyof typeof IMAGES;

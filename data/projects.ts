@@ -111,6 +111,23 @@ export const projects: Project[] = [
     previewUrl: "https://pokemonpuh.netlify.app/",
   },
   {
+    id: "DopFood",
+    category: "website",
+    title: "DopFood",
+    image: IMAGES.dopfood,
+    shortDescription: "LARAVEL, TAILWINDCSS, VITE, PHP, MYSQL, JAVASCRIPT",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Analyzed the business requirements and designed the core features and functional workflows of the application.",
+      "Planned the development roadmap and divided the project into development phases to organize and prioritize features effectively.",
+      "Developed the frontend interface and user interactions, integrating frontend components with Backend APIs.",
+      "Developed the Backend using Laravel, including database structures, business logic, RESTful APIs, order management, bill splitting, cost calculation, and payment workflows.",
+      "Implemented complex bill calculations involving shipping fees, discounts, and VAT to ensure accurate cost allocation among participants.",
+      "Utilized AI coding assistants such as GitHub Copilot, Claude, and Gemini to support coding, debugging, code analysis, and solution development while maintaining control over the implementation and technical decisions."
+    ],
+    previewUrl: "https://dopfood.kesug.com/",
+  },
+  {
     id: "miniPanel",
     category: "zalo-mini-app",
     title: "miniPanel",
