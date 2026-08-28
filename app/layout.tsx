@@ -3,9 +3,8 @@ import "@/assets/sass/index.scss";
 
 import type { Metadata } from "next";
 
-import { inter } from "@/lib/fonts";
-
 import { siteConfig } from "../config/site";
+import { bebasNeue } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -101,7 +100,7 @@ export default function RootLayout({
       style={{ colorScheme: "dark" }}
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} bg-background font-sans antialiased`}>
+      <body className={`${bebasNeue.className} bg-background font-sans antialiased`}>
         {children}
       </body>
     </html>
