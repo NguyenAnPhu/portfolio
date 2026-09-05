@@ -8,7 +8,7 @@ export const projects: Project[] = [
     title: "Nha Khoa Orion",
     image: IMAGES.orion,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "Greenvoices Media",
     image: IMAGES.greenvoices,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Evaluated UI/UX designs, built responsive interfaces and integrated Backend functionalities.",
       "Developed complex data fetching and rendering logic for core Homepage modules, including Courses, News and Services.",
@@ -30,12 +30,26 @@ export const projects: Project[] = [
     previewUrl: "https://greenvoices.vn/",
   },
   {
+    id: "lptech",
+    category: "website",
+    title: "LPTECH ASIA",
+    image: IMAGES.lptech,
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
+      "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
+    ],
+    previewUrl: "https://nhakhoaorion.vn/",
+  },
+  {
     id: "r-techno-vietnam",
     category: "website",
     title: "R Techno VietNam",
     image: IMAGES.rtechno,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Consulted on UI/UX flows, developed frontend components and integrated Backend APIs.",
       "Implement the file download feature",
@@ -48,7 +62,7 @@ export const projects: Project[] = [
     title: "Viện Đào tạo & Nghiên cứu Kinh tế - Xã hội (ERT)",
     image: IMAGES.ert,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
@@ -62,7 +76,7 @@ export const projects: Project[] = [
     title: "SENSORS VIỆT NAM",
     image: IMAGES.sensors,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
@@ -76,7 +90,7 @@ export const projects: Project[] = [
     title: "Thăng Long JSC",
     image: IMAGES.thanglongjsc,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
@@ -90,7 +104,7 @@ export const projects: Project[] = [
     title: "Viaro Coffee",
     image: IMAGES.viarocoffee,
     shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
@@ -104,7 +118,7 @@ export const projects: Project[] = [
     title: "Pokemon",
     image: IMAGES.pokemon,
     shortDescription: "VueJS, HTML, SCSS, JS, VITE, TAILWINDCSS",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "This project is designed to learn the fundamentals of Vue.js 3, covering essential concepts such as the Reactivity system (ref/reactive), data binding (v-model, v-bind), event handling (v-on), component communication (Props/Emits), and basic state management.",
     ],
@@ -123,7 +137,7 @@ export const projects: Project[] = [
       "Developed the frontend interface and user interactions, integrating frontend components with Backend APIs.",
       "Developed the Backend using Laravel, including database structures, business logic, RESTful APIs, order management, bill splitting, cost calculation, and payment workflows.",
       "Implemented complex bill calculations involving shipping fees, discounts, and VAT to ensure accurate cost allocation among participants.",
-      "Utilized AI coding assistants such as GitHub Copilot, Claude, and Gemini to support coding, debugging, code analysis, and solution development while maintaining control over the implementation and technical decisions."
+      "Utilized AI coding assistants such as GitHub Copilot, Claude, and Gemini to support coding, debugging, code analysis, and solution development while maintaining control over the implementation and technical decisions.",
     ],
     previewUrl: "https://dopfood.kesug.com/",
   },
@@ -132,14 +146,15 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "miniPanel",
     image: IMAGES.miniPanel,
-    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    shortDescription:
+      "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Fullstack Developer",
     responsibilities: [
       "Developed the Mini App dashboard interface and functional workflows using ReactJS and TypeScript.",
       "Configured and integrated ZMP SDK and RESTful APIs to handle application data and business logic.",
       "Implemented permission checks and management features for products, articles, administrators, contacts, and menus, including CRUD operations and filtering.",
       "Developed dashboard statistics and order status management features.",
-      "Developed RESTful APIs using PHP for Product, Article, Contact and Admin CRUD operations."
+      "Developed RESTful APIs using PHP for Product, Article, Contact and Admin CRUD operations.",
     ],
     previewUrl: "https://zalo.me/s/4219493405174168636",
   },
@@ -148,7 +163,8 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "Mua sắm online ECOM",
     image: IMAGES.ecom,
-    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    shortDescription:
+      "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
     role: "Fullstack Developer",
     responsibilities: [
       "Built the user interface and deeply integrated the ZMP SDK.",
@@ -162,8 +178,9 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "Greenvoices Media",
     image: IMAGES.greenvoices_zmp,
-    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
-    role: "Frontend Developer",
+    shortDescription:
+      "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    role: "Fullstack Developer",
     responsibilities: [
       "Took primary responsibility for building the Mini App interface and configuring the ZMP SDK.",
       "Fully integrated external APIs.",
@@ -177,8 +194,9 @@ export const projects: Project[] = [
     category: "zalo-mini-app",
     title: "HRnavi",
     image: IMAGES.hrnavi,
-    shortDescription: "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
-    role: "Frontend Developer",
+    shortDescription:
+      "TypeScript, ReactJS, Redux Toolkit, RTK Query, ZMP SDK, VITE, TAILWINDCSS, PHP",
+    role: "Fullstack Developer",
     responsibilities: [
       "Took primary responsibility for building the Mini App interface and configuring the ZMP SDK.",
       "Fully integrated external APIs.",
@@ -193,12 +211,13 @@ export const projects: Project[] = [
     title: "Bát Trạch Lạc Việt",
     image: IMAGES.battrach,
     shortDescription: "TypeScript, React Native",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     responsibilities: [
       "Utilized AI assistance to refactor the existing codebase and smoothly migrate the project into a mobile app for Android.",
       "Developed the application using React Native (TypeScript).",
       "Integrated comprehensive APIs to ensure Data synchronization, High performance and System stability.",
     ],
-    previewUrl: "https://play.google.com/store/apps/details?id=com.lptech.battrach",
+    previewUrl:
+      "https://play.google.com/store/apps/details?id=com.lptech.battrach",
   },
 ];
