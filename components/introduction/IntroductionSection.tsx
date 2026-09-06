@@ -63,8 +63,8 @@ export function IntroductionSection() {
 
     const xTo = gsap.quickTo(avatarCardRef.current, "x", { duration: 0.4, ease: "power2.out" });
     const yTo = gsap.quickTo(avatarCardRef.current, "y", { duration: 0.4, ease: "power2.out" });
-    const rotateXTo = gsap.quickTo(avatarCardRef.current, "rotateX", { duration: 0.4, ease: "power2.out" });
-    const rotateYTo = gsap.quickTo(avatarCardRef.current, "rotateY", { duration: 0.4, ease: "power2.out" });
+    const rotateXTo = gsap.quickTo(avatarCardRef.current, "rotationX", { duration: 0.4, ease: "power2.out" });
+    const rotateYTo = gsap.quickTo(avatarCardRef.current, "rotationY", { duration: 0.4, ease: "power2.out" });
 
     const handleMouseMove = contextSafe((e: MouseEvent) => {
       if (!avatarCardRef.current) return;

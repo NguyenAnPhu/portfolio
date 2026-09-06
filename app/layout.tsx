@@ -7,6 +7,7 @@ import { inter } from "@/lib/fonts";
 
 import { siteConfig } from "../config/site";
 import ChatBot from "@/components/ChatBot";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
@@ -105,6 +106,7 @@ export default function RootLayout({
       <body className={`${inter.variable} bg-background font-sans antialiased`} suppressHydrationWarning>
         {children}
         <ChatBot />
+        <SpeedInsights />
       </body>
     </html>
   );
