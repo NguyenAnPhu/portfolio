@@ -1,16 +1,62 @@
 "use client";
 
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 import { Experience, ResponsibilityGroup } from "@/types";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+}
 
 interface ExperienceItemProps {
   experience: Experience;
 }
 
 export function ExperienceItem({ experience }: ExperienceItemProps) {
+  const itemRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!cardRef.current || !dotRef.current) return;
+
+    gsap.fromTo(
+      dotRef.current,
+      { scale: 0, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.4,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: itemRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      cardRef.current,
+      { x: 25, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: itemRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, { scope: itemRef });
+
   const renderResponsibilityGroup = (group: ResponsibilityGroup, isSubGroup = false) => {
     return (
       <div key={group.title} className={isSubGroup ? "mt-4" : "mt-6"}>
@@ -36,32 +82,33 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
   };
 
   return (
-    <div className="relative pl-8 sm:pl-32 py-6 group">
+    <div ref={itemRef} className="relative pl-10 sm:pl-16 py-5 group">
       {/* Timeline connector and dot */}
-      <div className="absolute left-0 sm:left-24 top-6 flex h-full w-8 sm:w-16 flex-col items-center">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-brand-200 bg-background text-brand-500 shadow-sm transition-all duration-200 group-hover:border-brand-500 group-hover:bg-brand-50 z-10 relative">
+      <div className="absolute left-0 sm:left-2 top-5 flex h-full w-8 sm:w-9 flex-col items-center">
+        <div 
+          ref={dotRef}
+          className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border-2 border-brand-400/80 bg-background text-brand-600 shadow-md shadow-brand-500/20 z-10 relative dark:bg-card dark:text-brand-400 group-hover:scale-110 group-hover:border-brand-500 transition-transform duration-300"
+        >
           <BusinessCenterIcon fontSize="small" />
         </div>
-        <div className="h-full w-[2px] bg-border group-last:bg-transparent -mt-2"></div>
+        {/* Connecting line terminates at the last item's dot */}
+        <div className="w-[2px] bg-gradient-to-b from-brand-500/80 via-indigo-500/50 to-border/40 h-full -mt-2 group-last:hidden"></div>
       </div>
 
-      <motion.div 
-        className="rounded-2xl glass-card p-6 cursor-default"
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <div 
+        ref={cardRef}
+        className="rounded-2xl glass-card p-6 cursor-default transition-all duration-300 hover:shadow-xl hover:border-brand-500/30 border border-white/10"
       >
         <div className="mb-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
           <div>
             <h3 className="text-xl font-bold text-foreground leading-tight">
               {experience.position}
             </h3>
-            <p className="mt-1 font-semibold text-brand-700 text-sm tracking-wide">
+            <p className="mt-1 font-semibold text-brand-600 dark:text-brand-400 text-sm tracking-wide">
               {experience.company}
             </p>
           </div>
-          <span className="shrink-0 rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-600 text-center">
+          <span className="shrink-0 rounded-full bg-brand-50 dark:bg-brand-950/80 px-3.5 py-1 text-sm font-medium text-brand-600 dark:text-brand-300 text-center shadow-xs border border-brand-200/50 dark:border-brand-800/50">
             {experience.period}
           </span>
         </div>
@@ -73,7 +120,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
             </React.Fragment>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

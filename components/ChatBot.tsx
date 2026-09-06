@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ChatIcon from '@mui/icons-material/Chat';
 import CloseIcon from '@mui/icons-material/Close';
@@ -43,7 +43,7 @@ export default function ChatBot() {
 
     try {
       const history = messages
-        .filter((_, index) => index > 0) // Skip the first default model message
+        .filter((_, index) => index > 0) // Skip default model message
         .map(msg => ({
           role: msg.role,
           parts: [{ text: msg.text }]
@@ -70,25 +70,27 @@ export default function ChatBot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div suppressHydrationWarning className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+      {/* Chat Box Container */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9, transformOrigin: "bottom right" }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-            className="mb-4 flex h-[500px] w-[350px] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl sm:w-[400px] glass-panel"
+            initial={{ opacity: 0, scale: 0.85, y: 15, transformOrigin: "bottom right" }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.85, y: 15 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-3 sm:mb-4 flex h-[460px] sm:h-[500px] max-h-[calc(100vh-6rem)] w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] flex-col overflow-hidden rounded-2xl border border-border bg-background/95 shadow-2xl backdrop-blur-xl glass-panel"
           >
             {/* Header */}
-            <div className="flex items-center justify-between bg-primary p-4 text-primary-foreground shadow-sm">
+            <div className="flex items-center justify-between bg-brand-600 p-4 text-white shadow-sm">
               <div className="flex items-center gap-2">
                 <SmartToyIcon />
                 <span className="font-semibold tracking-wide">AI Assistant</span>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="rounded-full p-1 transition-colors hover:bg-black/10 dark:hover:bg-white/20"
+                className="rounded-full w-9 h-9 flex items-center justify-center transition-colors hover:bg-white/20 cursor-pointer"
+                aria-label="Close Chat"
               >
                 <CloseIcon fontSize="small" />
               </button>
@@ -111,7 +113,7 @@ export default function ChatBot() {
                     <div
                       className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full shadow-sm ${
                         msg.role === "user"
-                          ? "bg-primary text-primary-foreground"
+                          ? "bg-brand-600 text-white"
                           : "bg-muted text-muted-foreground"
                       }`}
                     >
@@ -122,13 +124,13 @@ export default function ChatBot() {
                       )}
                     </div>
                     <div
-                      className={`rounded-2xl px-4 py-2 text-sm shadow-sm ${
+                      className={`rounded-2xl px-4 py-2.5 text-sm shadow-sm ${
                         msg.role === "user"
-                          ? "bg-primary text-primary-foreground rounded-br-none"
+                          ? "bg-brand-600 text-white rounded-br-none"
                           : "bg-muted text-foreground rounded-bl-none border border-border"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap">{msg.text}</p>
+                      <p className="whitespace-pre-wrap leading-relaxed">{msg.text}</p>
                     </div>
                   </div>
                 </div>
@@ -139,20 +141,20 @@ export default function ChatBot() {
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground shadow-sm">
                       <SmartToyIcon fontSize="small" />
                     </div>
-                    <div className="flex gap-1 rounded-2xl rounded-bl-none bg-muted px-4 py-3 border border-border shadow-sm">
+                    <div className="flex gap-1.5 rounded-2xl rounded-bl-none bg-muted px-4 py-3 border border-border shadow-sm">
                       <motion.div
-                        className="h-2 w-2 rounded-full bg-muted-foreground"
-                        animate={{ y: [0, -5, 0] }}
+                        className="h-2 w-2 rounded-full bg-brand-500"
+                        animate={{ y: [0, -6, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
                       />
                       <motion.div
-                        className="h-2 w-2 rounded-full bg-muted-foreground"
-                        animate={{ y: [0, -5, 0] }}
+                        className="h-2 w-2 rounded-full bg-brand-500"
+                        animate={{ y: [0, -6, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
                       />
                       <motion.div
-                        className="h-2 w-2 rounded-full bg-muted-foreground"
-                        animate={{ y: [0, -5, 0] }}
+                        className="h-2 w-2 rounded-full bg-brand-500"
+                        animate={{ y: [0, -6, 0] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
                       />
                     </div>
@@ -165,7 +167,7 @@ export default function ChatBot() {
             {/* Input Form */}
             <form
               onSubmit={handleSend}
-              className="border-t border-border p-3 bg-background"
+              className="border-t border-border p-3 bg-background/80 backdrop-blur-md"
             >
               <div className="flex items-center gap-2">
                 <input
@@ -179,7 +181,7 @@ export default function ChatBot() {
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-500 text-white transition-transform hover:scale-105 hover:bg-brand-600 disabled:opacity-50 disabled:hover:scale-100 shadow-md"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white transition-transform hover:scale-105 hover:bg-brand-700 disabled:opacity-50 disabled:hover:scale-100 shadow-md cursor-pointer"
                 >
                   <SendIcon fontSize="small" />
                 </button>
@@ -189,22 +191,24 @@ export default function ChatBot() {
         )}
       </AnimatePresence>
 
-      {/* FAB Button */}
-      <AnimatePresence>
-        {!isOpen && (
-          <motion.button
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setIsOpen(true)}
-            className="group flex h-14 w-14 items-center justify-center rounded-full bg-brand-500 text-white shadow-lg hover:shadow-brand-500/50 hover:bg-brand-600 transition-colors hover:cursor-pointer"
-          >
-            <ChatIcon className="group-hover:animate-pulse" />
-          </motion.button>
-        )}
-      </AnimatePresence>
+      {/* Persistent Toggle FAB Button */}
+      <motion.button
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.92 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className="group flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 text-white shadow-xl hover:shadow-brand-500/40 hover:bg-brand-700 transition-all duration-300 hover:cursor-pointer relative z-50 border border-white/10"
+        aria-label={isOpen ? "Close Chat" : "Open Chat"}
+      >
+        <motion.div
+          key={isOpen ? "close" : "chat"}
+          initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+          animate={{ rotate: 0, opacity: 1, scale: 1 }}
+          exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+          transition={{ duration: 0.2 }}
+        >
+          {isOpen ? <CloseIcon /> : <ChatIcon />}
+        </motion.div>
+      </motion.button>
     </div>
   );
 }

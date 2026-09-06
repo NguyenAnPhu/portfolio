@@ -102,7 +102,7 @@ export default function RootLayout({
       style={{ colorScheme: "dark" }}
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} bg-background font-sans antialiased`}>
+      <body className={`${inter.variable} bg-background font-sans antialiased`} suppressHydrationWarning>
         {children}
         <ChatBot />
       </body>

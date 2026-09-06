@@ -3,12 +3,17 @@
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useEffect, useRef, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { experiences } from "@/data/experience";
 
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { ExperienceItem } from "./ExperienceItem";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function ExperienceSection() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -22,22 +27,22 @@ export function ExperienceSection() {
       return;
     }
 
-    const updateContentHeight = () => setContentHeight(content.scrollHeight);
+    const updateContentHeight = () => {
+      setContentHeight(content.scrollHeight);
+      ScrollTrigger.refresh();
+    };
     updateContentHeight();
 
     const resizeObserver = new ResizeObserver(updateContentHeight);
     resizeObserver.observe(content);
 
     return () => resizeObserver.disconnect();
-  }, []);
+  }, [isExpanded]);
 
   return (
     <Section id="experience" title="Work Experience">
       <Container>
         <div className="mx-auto max-w-4xl relative">
-          {/* Main timeline line for desktop */}
-          <div className="absolute left-4 top-10 bottom-10 hidden w-0.5 bg-border sm:left-26 sm:block"></div>
-
           <div className="relative">
             <div
               ref={contentRef}
@@ -49,26 +54,27 @@ export function ExperienceSection() {
                   : undefined,
               }}
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col space-y-2">
                 {experiences.map((experience) => (
                   <ExperienceItem key={experience.id} experience={experience} />
                 ))}
               </div>
             </div>
 
+            {/* Sleek bottom gradient collapse overlay */}
             <div
-              className={`absolute inset-x-0 bottom-0 flex justify-center pt-20 transition-opacity duration-500 ${
+              className={`absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pb-2 pt-28 transition-all duration-500 ${
                 isExpanded ? "pointer-events-none opacity-0" : "opacity-100"
               }`}
               aria-hidden={isExpanded}
             >
-              <div className="absolute inset-0 bg-linear-to-t from-background via-background/75 to-transparent backdrop-blur-[2px] rounded-b-lg" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none rounded-b-2xl" />
               <button
                 type="button"
                 onClick={() => setIsExpanded(true)}
                 aria-controls="experience-content"
                 aria-expanded={isExpanded}
-                className="hover:cursor-pointer transition-all relative z-10 inline-flex items-center gap-1 rounded-full border border-brand-200/80 bg-background/90 px-5 py-2.5 text-sm font-semibold text-brand-700 shadow-lg shadow-brand-900/10 backdrop-blur-md transition-all hover:-translate-y-0.5 hover:border-brand-400 hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+                className="hover:cursor-pointer transition-all relative z-10 inline-flex items-center gap-1.5 rounded-full border border-brand-400/40 bg-background/90 px-6 py-2.5 text-sm font-semibold text-brand-600 dark:text-brand-400 shadow-xl shadow-brand-500/10 backdrop-blur-md hover:scale-105 hover:border-brand-500 hover:bg-brand-50 dark:hover:bg-brand-950/80 active:scale-95"
               >
                 View more
                 <KeyboardArrowDownIcon fontSize="small" />
@@ -82,7 +88,7 @@ export function ExperienceSection() {
                   onClick={() => setIsExpanded(false)}
                   aria-controls="experience-content"
                   aria-expanded={isExpanded}
-                  className="hover:cursor-pointer transition-all inline-flex items-center gap-1 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+                  className="hover:cursor-pointer transition-all inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground shadow-md hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 cursor-pointer active:scale-95"
                 >
                   Show less
                   <KeyboardArrowUpIcon fontSize="small" />

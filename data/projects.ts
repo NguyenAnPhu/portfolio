@@ -30,20 +30,6 @@ export const projects: Project[] = [
     previewUrl: "https://greenvoices.vn/",
   },
   {
-    id: "lptech",
-    category: "website",
-    title: "LPTECH ASIA",
-    image: IMAGES.lptech,
-    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
-    role: "Fullstack Developer",
-    responsibilities: [
-      "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
-      "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
-      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
-    ],
-    previewUrl: "https://nhakhoaorion.vn/",
-  },
-  {
     id: "r-techno-vietnam",
     category: "website",
     title: "R Techno VietNam",
@@ -55,6 +41,20 @@ export const projects: Project[] = [
       "Implement the file download feature",
     ],
     previewUrl: "https://rtechnovietnam.vn/",
+  },
+  {
+    id: "lptech",
+    category: "website",
+    title: "LPTECH ASIA",
+    image: IMAGES.lptech,
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
+      "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
+    ],
+    previewUrl: "https://lptech.asia/",
   },
   {
     id: "ert",
