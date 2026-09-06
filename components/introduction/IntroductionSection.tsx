@@ -59,7 +59,7 @@ export function IntroductionSection() {
     });
 
     // 2. Interactive Magnetic 3D Tilt Effect on Mouse Move
-    if (!avatarCardRef.current) return;
+    if (!avatarCardRef.current || !contextSafe) return;
 
     const xTo = gsap.quickTo(avatarCardRef.current, "x", { duration: 0.4, ease: "power2.out" });
     const yTo = gsap.quickTo(avatarCardRef.current, "y", { duration: 0.4, ease: "power2.out" });

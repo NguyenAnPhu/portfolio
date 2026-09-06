@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Nguyễn An Phú Portfolio",
-  url: "https://nguyenanphu.dev", // Using a placeholder since exact domain wasn't provided
-  ogImage: "https://nguyenanphu.dev/og.jpg",
+  url: "https://portfolio-mu-rosy-78.vercel.app",
+  ogImage: "/assets/imgs/thumbnail.png",
   description:
     "A personal portfolio of Nguyễn An Phú, FullStack Developer specializing in ReactJS, TypeScript, PHP, Zalo Mini App and React Native.",
   links: {
