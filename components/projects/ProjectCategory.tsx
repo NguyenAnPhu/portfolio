@@ -73,11 +73,11 @@ export function ProjectCategory({ title, category, projects }: ProjectCategoryPr
 
   return (
     <div ref={containerRef} className="mb-16 last:mb-0">
-      <h3 ref={titleRef} className="mb-8 flex items-center text-2xl font-bold text-foreground">
+      <h3 ref={titleRef} className="scroll-title mb-8 flex items-center text-2xl font-bold text-foreground">
         <span className="mr-4 inline-block h-8 w-2 rounded-full bg-gradient-to-b from-brand-500 to-indigo-600 shadow-sm shadow-brand-500/50"></span>
         {title}
       </h3>
-      <div ref={swiperWrapperRef} className="w-full min-w-0">
+      <div ref={swiperWrapperRef} className="scroll-fade-up w-full min-w-0">
         <Swiper
           grid={{
             rows: category == "website" ? 2 : 1,
@@ -107,7 +107,7 @@ export function ProjectCategory({ title, category, projects }: ProjectCategoryPr
           className="project-swiper w-full min-w-0 pb-12! pt-4!"
         >
           {categoryProjects.map((project) => (
-            <SwiperSlide key={project.id} className="h-auto!">
+            <SwiperSlide key={project.id}>
               <ProjectCard project={project} />
             </SwiperSlide>
           ))}

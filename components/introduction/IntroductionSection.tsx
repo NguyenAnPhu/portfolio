@@ -17,39 +17,7 @@ export function IntroductionSection() {
   const avatarImageRef = useRef<HTMLDivElement>(null);
 
   useGSAP((context, contextSafe) => {
-    // 1. Hero Entrance Timeline
-    const tl = gsap.timeline({
-      defaults: { ease: "power3.out", duration: 0.8 },
-    });
-
-    tl.from(".hero-tag", {
-      opacity: 0,
-      y: 20,
-      delay: 0.1,
-    })
-      .from(".hero-title", {
-        opacity: 0,
-        y: 30,
-        filter: "blur(8px)",
-      }, "-=0.6")
-      .from(".hero-subtitle", {
-        opacity: 0,
-        y: 25,
-      }, "-=0.6")
-      .from(".hero-bio", {
-        opacity: 0,
-        y: 30,
-        scale: 0.98,
-      }, "-=0.5")
-      .from(avatarCardRef.current, {
-        opacity: 0,
-        scale: 0.8,
-        filter: "blur(12px)",
-        duration: 1,
-        ease: "back.out(1.4)",
-      }, "-=0.8");
-
-    // Continuous subtle floating for Avatar image wrapper
+    // Keep only continuous motion and pointer interaction in GSAP.
     gsap.to(avatarImageRef.current, {
       y: -14,
       duration: 3,
@@ -128,7 +96,7 @@ export function IntroductionSection() {
           <div className="relative flex justify-center lg:justify-end [perspective:1000px]">
             <div
               ref={avatarCardRef}
-              className="relative transition-shadow duration-300 ease-out cursor-pointer"
+              className="hero-avatar relative transition-shadow duration-300 ease-out cursor-pointer"
               style={{ transformStyle: "preserve-3d" }}
             >
               <div

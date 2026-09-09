@@ -62,7 +62,7 @@ export function SkillGroup({ group }: SkillGroupProps) {
   return (
     <div 
       ref={containerRef}
-      className="rounded-2xl glass-card p-6 border border-white/10 shadow-lg"
+      className="scroll-fade-up rounded-2xl glass-card p-6 border border-white/10 shadow-lg"
     >
       <h3 className="mb-6 text-center text-lg font-bold text-foreground">
         {group.title}

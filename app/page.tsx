@@ -7,6 +7,8 @@ import { AnimatedBackground } from "@/components/layout/AnimatedBackground";
 import { ProjectsSection } from "@/components/projects/ProjectsSection";
 import { SkillsSection } from "@/components/skills/SkillsSection";
 
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <>

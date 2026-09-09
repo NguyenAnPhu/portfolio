@@ -44,7 +44,7 @@ export function EducationSection() {
         <div ref={containerRef} className="mx-auto max-w-3xl">
           <article 
             ref={cardRef}
-            className="relative flex flex-col gap-6 rounded-2xl glass-card p-6 cursor-default sm:flex-row sm:p-8 transition-shadow hover:shadow-2xl hover:border-brand-500/30"
+            className="scroll-fade-up relative flex flex-col gap-6 rounded-2xl glass-card p-6 cursor-default sm:flex-row sm:p-8 transition-shadow hover:shadow-2xl hover:border-brand-500/30"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700 dark:bg-brand-900/50 dark:text-brand-300">
               <SchoolIcon />

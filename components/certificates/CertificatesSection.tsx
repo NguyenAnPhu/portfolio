@@ -47,7 +47,7 @@ export function CertificatesSection() {
         <div ref={containerRef} className="mx-auto max-w-5xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {certificates.map((certificate) => (
-              <div key={certificate.id} className="cert-card-item">
+              <div key={certificate.id} className="scroll-scale-in cert-card-item">
                 <CertificateCard certificate={certificate} />
               </div>
             ))}

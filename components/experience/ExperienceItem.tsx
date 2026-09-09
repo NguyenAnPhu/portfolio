@@ -87,7 +87,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
       <div className="absolute left-0 sm:left-2 top-5 flex h-full w-8 sm:w-9 flex-col items-center">
         <div 
           ref={dotRef}
-          className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border-2 border-brand-400/80 bg-background text-brand-600 shadow-md shadow-brand-500/20 z-10 relative dark:bg-card dark:text-brand-400 group-hover:scale-110 group-hover:border-brand-500 transition-transform duration-300"
+          className="scroll-dot flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border-2 border-brand-400/80 bg-background text-brand-600 shadow-md shadow-brand-500/20 z-10 relative dark:bg-card dark:text-brand-400 group-hover:scale-110 group-hover:border-brand-500 transition-transform duration-300"
         >
           <BusinessCenterIcon fontSize="small" />
         </div>
@@ -97,7 +97,7 @@ export function ExperienceItem({ experience }: ExperienceItemProps) {
 
       <div 
         ref={cardRef}
-        className="rounded-2xl glass-card p-6 cursor-default transition-all duration-300 hover:shadow-xl hover:border-brand-500/30 border border-white/10"
+        className="scroll-slide-in rounded-2xl glass-card p-6 cursor-default transition-all duration-300 hover:shadow-xl hover:border-brand-500/30 border border-white/10"
       >
         <div className="mb-4 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
           <div>
