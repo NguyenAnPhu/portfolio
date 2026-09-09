@@ -43,6 +43,19 @@ export const projects: Project[] = [
     previewUrl: "https://rtechnovietnam.vn/",
   },
   {
+    id: "fidimilk",
+    category: "website",
+    title: "FIDIMILK VIETNAM",
+    image: IMAGES.fidimilk,
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
+      "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
+    ],
+    previewUrl: "https://fidimilk.com/",
+  },
+  {
     id: "lptech",
     category: "website",
     title: "LPTECH ASIA",
@@ -66,7 +79,7 @@ export const projects: Project[] = [
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
-      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the Product, News and Services modules.",
     ],
     previewUrl: "https://ertinstitute.com/",
   },
@@ -80,7 +93,7 @@ export const projects: Project[] = [
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
-      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the Product, News and Services modules.",
     ],
     previewUrl: "https://cambien.com.vn/",
   },
@@ -94,7 +107,7 @@ export const projects: Project[] = [
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
-      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the Product, News and Services modules.",
     ],
     previewUrl: "https://thanglongjsc.com.vn/",
   },
@@ -108,7 +121,6 @@ export const projects: Project[] = [
     responsibilities: [
       "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
       "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
-      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the News and Services modules.",
     ],
     previewUrl: "https://viarocoffee.com/",
   },

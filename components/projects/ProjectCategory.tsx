@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Grid } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import 'swiper/css/grid';
 
 import { Project, ProjectCategory as CategoryType } from "@/types";
 
@@ -76,9 +77,13 @@ export function ProjectCategory({ title, category, projects }: ProjectCategoryPr
         <span className="mr-4 inline-block h-8 w-2 rounded-full bg-gradient-to-b from-brand-500 to-indigo-600 shadow-sm shadow-brand-500/50"></span>
         {title}
       </h3>
-      <div ref={swiperWrapperRef}>
+      <div ref={swiperWrapperRef} className="w-full min-w-0">
         <Swiper
-          modules={[Pagination, Autoplay]}
+          grid={{
+            rows: category == "website" ? 2 : 1,
+            fill: "row",
+          }}
+          modules={[Grid, Pagination, Autoplay]}
           pagination={{ clickable: true }}
           autoplay={{
             delay: 3500,
@@ -99,7 +104,7 @@ export function ProjectCategory({ title, category, projects }: ProjectCategoryPr
               spaceBetween: 24,
             },
           }}
-          className="project-swiper pb-12! pt-4!"
+          className="project-swiper w-full min-w-0 pb-12! pt-4!"
         >
           {categoryProjects.map((project) => (
             <SwiperSlide key={project.id} className="h-auto!">
