@@ -16,10 +16,10 @@ export default function Home() {
       <FloatingContactBar />
       <main className="flex min-h-screen flex-col">
         <IntroductionSection />
-        <EducationSection />
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
+        <EducationSection />
         <CertificatesSection />
       </main>
     </>

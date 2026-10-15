@@ -84,6 +84,20 @@ export const projects: Project[] = [
     previewUrl: "https://ertinstitute.com/",
   },
   {
+    id: "vesinhcongnghiep",
+    category: "website",
+    title: "Vệ Sinh Công Nghiệp 5 Sao",
+    image: IMAGES.vscn,
+    shortDescription: "PHP, TWIG, HTML, SCSS, JS, JQUERY, BOOTSTRAP",
+    role: "Fullstack Developer",
+    responsibilities: [
+      "Participated in UI/UX design evaluations to ensure optimal user experience and feasibility.",
+      "Developed Frontend interfaces and seamlessly integrated data from the Backend.",
+      "Implemented an advanced data extraction feature to dynamically display highlight attributes for the Product, News and Services modules.",
+    ],
+    previewUrl: "https://vesinhcongnghiep.com/",
+  },
+  {
     id: "Sensors",
     category: "website",
     title: "SENSORS VIỆT NAM",
